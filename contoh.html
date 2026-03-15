@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Perkenalan - Mega Agustina Sihombing</title>
+    <style>
+        /* CSS untuk mempercantik tampilan Dashboard */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 4px solid #3498db;
+            object-fit: cover; /* Agar foto LinkedIn tidak gepeng */
+        }
+
+        h1 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 24px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Bagian detail yang disembunyikan/muncul lewat JS */
+        .info-detail {
+            display: none;
+            background: #eef2f3;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        /* Gaya tombol sesuai referensi W3Schools */
+        .btn-toggle {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-toggle:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHcTXd2nox46g/profile-displayphoto-shrink_800_800/B4EZYsPuzeHgAc-/0/1744499046511?e=1775088000&v=beta&t=9-aM_k0OPxPTO5jt2tCyK5jl3VtV0x1I_B75KtUCi0Q" 
+             alt="Profil Mega Agustina" 
+             class="profile-img">
+        
+        <h1>Halo, Saya Mega</h1>
+        <p>Mahasiswa Sistem Informasi 2024 yang tertarik dengan teknologi dan desain.</p>
+
+        <button id="btnInfo" class="btn-toggle">Lihat Detail Profil</button>
+
+        <div id="panelInfo" class="info-detail">
+            <strong>Detail Tambahan:</strong>
+            <ul>
+                <li>Asal: Sumatera Utara</li>
+                <li>Minat: UI/UX & Database</li>
+                <li>Alamat: Surabaya, Jawa Timur</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        /* LOGIKA JS BUTTON (Referensi: W3Schools)
+           Menggunakan addEventListener untuk menangani interaksi tombol
+        */
+        const tombol = document.getElementById("btnInfo");
+        const panel = document.getElementById("panelInfo");
+
+        tombol.addEventListener("click", function () {
+            // Mengecek apakah panel sedang tersembunyi atau tidak
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+                this.innerHTML = "Lihat Detail Profil";
+                this.style.backgroundColor = "#3498db";
+            } else {
+                panel.style.display = "block";
+                this.innerHTML = "Sembunyikan Detail";
+                this.style.backgroundColor = "#e74c3c"; // Berubah warna saat aktif
+            }
+        });
+    </script>
+
+</body>
+</html>
