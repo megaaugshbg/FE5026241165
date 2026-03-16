@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select a Plan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #e8e8e8;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-section {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-section h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .hero-section p {
+            color: #999;
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .popular-badge {
+            background-color: #9DC4B0;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 10px;
+            text-align: center;
+            border-radius: 6px 6px 0 0;
+            margin-bottom: 0;
+        }
+
+        /* card */
+        .plan-card {
+            background-color: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .plan-card.no-top-radius {
+            border-radius: 0 0 6px 6px;
+        }
+
+        .plan-header {
+            padding: 14px;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .bg-gold {
+            background-color: #D4A843;
+        }
+
+        .bg-sage {
+            background-color: #7BAE96;
+        }
+
+        /* price */
+        .price-area {
+            padding: 30px 20px 15px;
+        }
+
+        .price-area .currency {
+            font-size: 0.95rem;
+            color: #aaa;
+            vertical-align: top;
+            margin-top: 12px;
+            display: inline-block;
+        }
+
+        .price-area .amount {
+            font-size: 3.8rem;
+            font-weight: 300;
+            color: #555;
+            line-height: 1;
+        }
+
+        .price-area .period {
+            font-size: 0.72rem;
+            color: #aaa;
+            letter-spacing: 1px;
+        }
+
+        /* feature */
+        .feature-list {
+            list-style: none;
+            padding: 5px 25px;
+            margin: 0;
+        }
+
+        .feature-list li {
+            font-size: 0.83rem;
+            padding: 11px 0;
+            border-bottom: 1px solid #f2f2f2;
+            color: #666;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* button */
+        .btn-plan {
+            display: block;
+            width: calc(100% - 48px);
+            margin: 18px 24px 28px;
+            padding: 13px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-current {
+            background-color: #e5e5e5;
+            color: #aaa;
+        }
+
+        .btn-gold {
+            background-color: #D4A843;
+            color: #fff;
+        }
+
+        .btn-sage {
+            background-color: #7BAE96;
+            color: #fff;
+        }
+
+        .row.equal-height {
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-section">
+        <h1>Select a plan.</h1>
+        <p>
+            Choose the plan that best fits your needs.<br>
+            No hidden fees. Cancel anytime.
+        </p>
+    </div>
+
+    <!-- harga -->
+    <div class="container mb-5">
+        <div class="row justify-content-center equal-height">
+
+            <!-- PERSONAL -->
+            <div class="col-md-4 col-sm-10 mb-4 mb-md-0">
+                <div class="plan-card">
+                    <div class="plan-header bg-gold">Personal</div>
+                    <div class="price-area">
+                        <span class="currency">$</span>
+                        <span class="amount">50</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>Free</strong> 15 GB Cloud Storage</li>
+                        <li><strong>Unlimited</strong> Device Sync</li>
+                        <li><strong>Unlimited</strong> File Sharing</li>
+                        <li><strong>2x</strong> Upload Speed</li>
+                        <li><strong>100</strong> File Version History</li>
+                    </ul>
+                    <button class="btn-plan btn-current">Your Plan</button>
+                </div>
+            </div>
+
+            <!-- PROFESSIONAL -->
+            <div class="col-md-4 col-sm-10 mb-4 mb-md-0">
+                <div class="popular-badge">Popular</div>
+                <div class="plan-card no-top-radius">
+                    <div class="plan-header bg-sage">Professional</div>
+                    <div class="price-area">
+                        <span class="currency">$</span>
+                        <span class="amount">100</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>Free</strong> 200 GB Cloud Storage</li>
+                        <li><strong>Unlimited</strong> Device Sync</li>
+                        <li><strong>Unlimited</strong> Team Collaboration</li>
+                        <li><strong>5x</strong> Upload Speed</li>
+                        <li><strong>Unlimited</strong> File Version History</li>
+                    </ul>
+                    <button class="btn-plan btn-sage">Upgrade</button>
+                </div>
+            </div>
+
+            <!-- BUSINESS -->
+            <div class="col-md-4 col-sm-10 mb-4 mb-md-0">
+                <div class="plan-card">
+                    <div class="plan-header bg-gold">Business</div>
+                    <div class="price-area">
+                        <span class="currency">$</span>
+                        <span class="amount">225</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>Free</strong> 2 TB Cloud Storage</li>
+                        <li><strong>Unlimited</strong> Team Member Accounts</li>
+                        <li><strong>Unlimited</strong> Permission Management</li>
+                        <li><strong>10x</strong> Upload Speed</li>
+                        <li><strong>Priority</strong> 24/7 Support</li>
+                    </ul>
+                    <button class="btn-plan btn-gold">Upgrade</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
